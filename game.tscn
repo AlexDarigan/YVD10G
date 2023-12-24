@@ -35,8 +35,13 @@ size_flags_vertical = 3
 script = ExtResource("4_p5jqa")
 
 [node name="DeckEditor" type="Control" parent="ScreenManager/Screens"]
-layout_mode = 3
-anchors_preset = 0
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="ScreenManager/Screens/DeckEditor"]
 layout_mode = 0
@@ -48,8 +53,12 @@ text = "Deck Editor"
 
 [node name="Connect" type="Control" parent="ScreenManager/Screens"]
 visible = false
-layout_mode = 3
-anchors_preset = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="ScreenManager/Screens/Connect"]
 layout_mode = 0
@@ -60,9 +69,265 @@ offset_bottom = 369.0
 text = "Connect"
 
 [node name="Database" type="Control" parent="ScreenManager/Screens"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScreenManager/Screens/Database"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Left" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.0666667, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScreenManager/Screens/Database/HBoxContainer"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+
+[node name="Pages" type="HBoxContainer" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Prev" type="Button" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Pages"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "<<"
+
+[node name="CurrentPage" type="Label" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Pages"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0/???"
+horizontal_alignment = 1
+
+[node name="Next" type="Button" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Pages"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = ">>"
+
+[node name="Control" type="Control" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Cards" type="GridContainer" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -362.0
+offset_top = -276.0
+offset_right = 362.0
+offset_bottom = 276.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 7
+
+[node name="Card" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card2" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card3" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card4" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card5" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card6" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card7" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card8" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card9" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card10" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card11" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card12" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card13" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card14" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card15" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card16" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card17" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card18" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card19" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card20" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card21" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card22" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card23" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card24" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card25" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card26" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card27" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Card28" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer/VBoxContainer/Control/Cards"]
+custom_minimum_size = Vector2(100, 135)
+layout_mode = 2
+
+[node name="Center" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer"]
 visible = false
-layout_mode = 3
-anchors_preset = 0
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.911275, 0.554454, 0.343954, 1)
+
+[node name="Filters" type="VBoxContainer" parent="ScreenManager/Screens/Database/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="LineEdit" parent="ScreenManager/Screens/Database/HBoxContainer/Filters"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Name"
+
+[node name="Set" type="LineEdit" parent="ScreenManager/Screens/Database/HBoxContainer/Filters"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Set"
+
+[node name="MinLevel" type="LineEdit" parent="ScreenManager/Screens/Database/HBoxContainer/Filters"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Min Level"
+
+[node name="MaxLevel" type="LineEdit" parent="ScreenManager/Screens/Database/HBoxContainer/Filters"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Max Level"
+
+[node name="MinAttack" type="LineEdit" parent="ScreenManager/Screens/Database/HBoxContainer/Filters"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Min Attack"
+
+[node name="MaxAttack" type="LineEdit" parent="ScreenManager/Screens/Database/HBoxContainer/Filters"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Max Attack"
+
+[node name="MinDefense" type="LineEdit" parent="ScreenManager/Screens/Database/HBoxContainer/Filters"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Min Defense"
+
+[node name="MaxDefense" type="LineEdit" parent="ScreenManager/Screens/Database/HBoxContainer/Filters"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Max Defense"
+
+[node name="EffectText" type="LineEdit" parent="ScreenManager/Screens/Database/HBoxContainer/Filters"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Effect Text"
+
+[node name="CardType" type="OptionButton" parent="ScreenManager/Screens/Database/HBoxContainer/Filters"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ExtraDeckType" type="OptionButton" parent="ScreenManager/Screens/Database/HBoxContainer/Filters"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Attribute" type="OptionButton" parent="ScreenManager/Screens/Database/HBoxContainer/Filters"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CreatureType" type="OptionButton" parent="ScreenManager/Screens/Database/HBoxContainer/Filters"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SpecialEffectType" type="OptionButton" parent="ScreenManager/Screens/Database/HBoxContainer/Filters"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SearchButton" type="Button" parent="ScreenManager/Screens/Database/HBoxContainer/Filters"]
+layout_mode = 2
+text = "Search"
+
+[node name="Right" type="ColorRect" parent="ScreenManager/Screens/Database/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 0.258824, 0.392157, 1)
 
 [node name="Label" type="Label" parent="ScreenManager/Screens/Database"]
 layout_mode = 0
@@ -72,16 +337,14 @@ offset_right = 631.0
 offset_bottom = 369.0
 text = "Database"
 
-[node name="Background" type="ColorRect" parent="ScreenManager/Screens/Database"]
-custom_minimum_size = Vector2(1280, 720)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="Game" type="Control" parent="ScreenManager/Screens"]
 visible = false
-layout_mode = 3
-anchors_preset = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="ScreenManager/Screens/Game"]
 layout_mode = 0
@@ -93,8 +356,12 @@ text = "Game"
 
 [node name="Settings" type="Control" parent="ScreenManager/Screens"]
 visible = false
-layout_mode = 3
-anchors_preset = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="ScreenManager/Screens/Settings"]
 layout_mode = 0

@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhys4aa02k365"]
+[gd_scene load_steps=5 format=3 uid="uid://dhys4aa02k365"]
 
 [ext_resource type="PackedScene" uid="uid://b4vwgjs732s3n" path="res://main_menu.tscn" id="1_py6sl"]
 [ext_resource type="Script" path="res://game.gd" id="1_uh8ag"]
+[ext_resource type="Script" path="res://screen_manager.gd" id="2_r177r"]
+[ext_resource type="Script" path="res://screens.gd" id="4_p5jqa"]
 
 [node name="Game" type="Control"]
 custom_minimum_size = Vector2(1280, 720)
@@ -9,12 +11,34 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_uh8ag")
 
-[node name="DeckEditor" type="Control" parent="."]
+[node name="Background" type="ColorRect" parent="."]
 visible = false
+layout_mode = 0
+offset_right = 260.0
+offset_bottom = 226.0
+
+[node name="ScreenManager" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_r177r")
+
+[node name="MainMenu" parent="ScreenManager" instance=ExtResource("1_py6sl")]
+layout_mode = 2
+
+[node name="Screens" type="Control" parent="ScreenManager"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("4_p5jqa")
+
+[node name="DeckEditor" type="Control" parent="ScreenManager/Screens"]
 layout_mode = 3
 anchors_preset = 0
 
-[node name="Label" type="Label" parent="DeckEditor"]
+[node name="Label" type="Label" parent="ScreenManager/Screens/DeckEditor"]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 346.0
@@ -22,12 +46,12 @@ offset_right = 631.0
 offset_bottom = 369.0
 text = "Deck Editor"
 
-[node name="Connect" type="Control" parent="."]
+[node name="Connect" type="Control" parent="ScreenManager/Screens"]
 visible = false
 layout_mode = 3
 anchors_preset = 0
 
-[node name="Label" type="Label" parent="Connect"]
+[node name="Label" type="Label" parent="ScreenManager/Screens/Connect"]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 346.0
@@ -35,12 +59,12 @@ offset_right = 631.0
 offset_bottom = 369.0
 text = "Connect"
 
-[node name="Database" type="Control" parent="."]
+[node name="Database" type="Control" parent="ScreenManager/Screens"]
 visible = false
 layout_mode = 3
 anchors_preset = 0
 
-[node name="Label" type="Label" parent="Database"]
+[node name="Label" type="Label" parent="ScreenManager/Screens/Database"]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 346.0
@@ -48,12 +72,18 @@ offset_right = 631.0
 offset_bottom = 369.0
 text = "Database"
 
-[node name="Game" type="Control" parent="."]
+[node name="Background" type="ColorRect" parent="ScreenManager/Screens/Database"]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Game" type="Control" parent="ScreenManager/Screens"]
 visible = false
 layout_mode = 3
 anchors_preset = 0
 
-[node name="Label" type="Label" parent="Game"]
+[node name="Label" type="Label" parent="ScreenManager/Screens/Game"]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 346.0
@@ -61,24 +91,15 @@ offset_right = 631.0
 offset_bottom = 369.0
 text = "Game"
 
-[node name="Settings" type="Control" parent="."]
+[node name="Settings" type="Control" parent="ScreenManager/Screens"]
 visible = false
 layout_mode = 3
 anchors_preset = 0
 
-[node name="Label" type="Label" parent="Settings"]
+[node name="Label" type="Label" parent="ScreenManager/Screens/Settings"]
 layout_mode = 0
 offset_left = 542.0
 offset_top = 346.0
 offset_right = 631.0
 offset_bottom = 369.0
 text = "Settings"
-
-[node name="Background" type="ColorRect" parent="."]
-visible = false
-layout_mode = 0
-offset_right = 260.0
-offset_bottom = 226.0
-
-[node name="MainMenu" parent="." instance=ExtResource("1_py6sl")]
-layout_mode = 1

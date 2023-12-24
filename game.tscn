@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhys4aa02k365"]
+
+[ext_resource type="PackedScene" uid="uid://b4vwgjs732s3n" path="res://main_menu.tscn" id="1_py6sl"]
+[ext_resource type="Script" path="res://game.gd" id="1_uh8ag"]
+
+[node name="Game" type="Control"]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_uh8ag")
+
+[node name="DeckEditor" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Label" type="Label" parent="DeckEditor"]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 346.0
+offset_right = 631.0
+offset_bottom = 369.0
+text = "Deck Editor"
+
+[node name="Connect" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Label" type="Label" parent="Connect"]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 346.0
+offset_right = 631.0
+offset_bottom = 369.0
+text = "Connect"
+
+[node name="Database" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Label" type="Label" parent="Database"]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 346.0
+offset_right = 631.0
+offset_bottom = 369.0
+text = "Database"
+
+[node name="Game" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Label" type="Label" parent="Game"]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 346.0
+offset_right = 631.0
+offset_bottom = 369.0
+text = "Game"
+
+[node name="Settings" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Label" type="Label" parent="Settings"]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 346.0
+offset_right = 631.0
+offset_bottom = 369.0
+text = "Settings"
+
+[node name="Background" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 260.0
+offset_bottom = 226.0
+
+[node name="MainMenu" parent="." instance=ExtResource("1_py6sl")]
+layout_mode = 1
